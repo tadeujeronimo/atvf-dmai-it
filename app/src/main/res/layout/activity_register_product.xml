@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.tadeujeronimo.deliveryapp.ui.RegisterProductActivity" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3EDED">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.tadeujeronimo.deliveryapp.ui.RegisterProductActivity">
+
+            <TextView
+                android:id="@+id/nameDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:text="Android delivery"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageDelivery"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameDelivery" />
+
+            <TextView
+                android:id="@+id/txvNameProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Nome do produto"
+                app:layout_constraintStart_toStartOf="@id/edtNameProduct"
+                app:layout_constraintTop_toBottomOf="@id/imageDelivery" />
+
+            <EditText
+                android:id="@+id/edtNameProduct"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite o nome do produto"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvNameProduct" />
+
+            <TextView
+                android:id="@+id/txvDescriptionProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Descrição do produto"
+                app:layout_constraintStart_toStartOf="@id/edtNameProduct"
+                app:layout_constraintTop_toBottomOf="@id/edtNameProduct" />
+
+            <EditText
+                android:id="@+id/edtDescriptionProduct"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite a discrição do produto"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvDescriptionProduct" />
+
+
+            <TextView
+                android:id="@+id/txvUnitPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Preço Unitário"
+                app:layout_constraintStart_toStartOf="@id/edtNameProduct"
+                app:layout_constraintTop_toBottomOf="@id/edtDescriptionProduct" />
+
+            <EditText
+                android:id="@+id/edtUnitPriceProduct"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite o preço unitário"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvUnitPrice" />
+
+            <TextView
+                android:id="@+id/txvCode"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Código de Barra"
+                app:layout_constraintStart_toStartOf="@id/edtNameProduct"
+                app:layout_constraintTop_toBottomOf="@id/edtUnitPriceProduct" />
+
+            <EditText
+                android:id="@+id/edtCode"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite o código de Barra"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvCode" />
+
+            <TextView
+                android:id="@+id/txvImage"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Imagem"
+                app:layout_constraintStart_toStartOf="@id/edtNameProduct"
+                app:layout_constraintTop_toBottomOf="@id/edtCode" />
+
+            <EditText
+                android:id="@+id/edtImage"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Link imagem"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvImage" />
+
+            <TextView
+                android:id="@+id/error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Você precisa preencher todos os campos"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtImage" />
+
+
+            <Button
+                android:id="@+id/btnRegisterProduct"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:backgroundTint="#E4941B"
+                android:onClick="@{() -> activity.registerProduct()}"
+                android:text="Cadastrar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/error" />
+
+            <Button
+                android:id="@+id/btnUpdateProduct"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:backgroundTint="#E4941B"
+                android:visibility="gone"
+                android:onClick="@{() -> activity.updateProduct()}"
+                android:text="Alterar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/error" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

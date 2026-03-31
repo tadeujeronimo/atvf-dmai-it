@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Delivery App</string>
+    <string name="text_carrinho">Carrinho</string>
+    <string name="imagem_de_carrinho">Imagem de carrinho</string>
+    <string name="text_price_total">Preço Total</string>
+    <string name="text_finalizar_pedido">Finalizar Pedido</string>
+    <string name="name_android_delivery">Delivery App</string>
+    <string name="text_make_order">Vamos fazer seu pedido</string>
+    <string name="product_delete">Produto deletado com sucesso!</string>
+    <string name="product_add">Produto adicionado ao carrinho</string>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.tadeujeronimo.deliveryapp.ui.HomeActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3EDED"
+        tools:context="com.tadeujeronimo.deliveryapp.ui.HomeActivity">
+
+        <Spinner
+            android:id="@+id/spinnerAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Digite seu endereco"
+            android:textColor="@color/color_default"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerAddress" />
+
+        <Button
+            android:id="@+id/btnFinishAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Salvar"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/edAddress"
+            app:layout_constraintTop_toBottomOf="@id/edAddress" />
+
+        <ImageView
+            android:id="@+id/iconAddAddress"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerAddress"
+            tools:src="@drawable/ic_address" />
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/name_android_delivery"
+            android:textSize="@dimen/dimen_25_sp"
+            app:layout_constraintStart_toStartOf="@id/btnFinishAddress"
+            app:layout_constraintTop_toBottomOf="@id/btnFinishAddress" />
+
+        <TextView
+            android:id="@+id/makeOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_make_order"
+            android:textSize="@dimen/dimen_25_sp"
+            app:layout_constraintStart_toStartOf="@id/welcome"
+            app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcListProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/makeOrder"
+            tools:listitem="@layout/item_home_product" />
+
+        <ImageView
+            android:id="@+id/iconOrder"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:onClick="@{() -> activity.onClickOrders()}"
+            android:src="@drawable/ic_order"
+            app:layout_constraintStart_toStartOf="@id/rcListProduct"
+            app:layout_constraintTop_toBottomOf="@id/rcListProduct"
+            tools:src="@drawable/ic_order" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> activity.onClickOrders()}"
+            android:text="Meus Pedidos"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@id/iconOrder"
+            app:layout_constraintStart_toEndOf="@id/iconOrder"
+            app:layout_constraintTop_toTopOf="@id/iconOrder" />
+
+        <include
+            android:id="@+id/menu"
+            layout="@layout/menu"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

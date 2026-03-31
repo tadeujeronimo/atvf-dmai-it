@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="activity"
+            type="com.tadeujeronimo.deliveryapp.ui.RegisterCustomerActivity" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3EDED"
+            tools:context="com.tadeujeronimo.deliveryapp.ui.RegisterCustomerActivity">
+
+            <TextView
+                android:id="@+id/nameDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:text="@string/name_android_delivery"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageDelivery"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameDelivery" />
+
+            <TextView
+                android:id="@+id/txvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Nome"
+                app:layout_constraintStart_toStartOf="@id/edtName"
+                app:layout_constraintTop_toBottomOf="@id/imageDelivery" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite seu nome"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvLogin" />
+
+            <TextView
+                android:id="@+id/txvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Email"
+                app:layout_constraintStart_toStartOf="@id/edtEmail"
+                app:layout_constraintTop_toBottomOf="@id/edtName" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite seu email"
+                android:inputType="text"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvEmail" />
+
+            <TextView
+                android:id="@+id/txvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Senha"
+                app:layout_constraintStart_toStartOf="@id/edtPassword"
+                app:layout_constraintTop_toBottomOf="@id/edtEmail" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite sua senha"
+                android:textAlignment="center"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvPassword" />
+
+            <TextView
+                android:id="@+id/txvImagem"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Link Imagem"
+                app:layout_constraintStart_toStartOf="@id/edtPassword"
+                app:layout_constraintTop_toBottomOf="@id/edtPassword" />
+
+            <EditText
+                android:id="@+id/edtImagem"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Insira o link da Imagem"
+                android:textAlignment="center"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvImagem" />
+
+            <TextView
+                android:id="@+id/txvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Rua"
+                app:layout_constraintStart_toStartOf="@id/edtImagem"
+                app:layout_constraintTop_toBottomOf="@id/edtImagem" />
+
+            <EditText
+                android:id="@+id/edtStreet"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite sua rua"
+                android:textAlignment="center"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvAddress" />
+
+            <TextView
+                android:id="@+id/txvNumberOfStreet"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Nº Complemento"
+                app:layout_constraintStart_toStartOf="@id/edtImagem"
+                app:layout_constraintTop_toBottomOf="@id/edtStreet" />
+
+            <EditText
+                android:id="@+id/edtNumberOfStreet"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Nº Complemento"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvNumberOfStreet" />
+
+
+            <TextView
+                android:id="@+id/txvComplement"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Complemento"
+                app:layout_constraintStart_toStartOf="@id/edtImagem"
+                app:layout_constraintTop_toBottomOf="@id/edtNumberOfStreet" />
+
+            <EditText
+                android:id="@+id/edtComplement"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite o seu complemento"
+                android:textAlignment="center"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvComplement" />
+
+            <TextView
+                android:id="@+id/txvCep"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:text="CEP"
+                app:layout_constraintStart_toStartOf="@id/edtImagem"
+                app:layout_constraintTop_toBottomOf="@id/edtComplement" />
+
+            <EditText
+                android:id="@+id/edtCep"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint="Digite o seu cep"
+                android:textAlignment="center"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvCep" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/edtCep"
+                app:layout_constraintStart_toStartOf="@id/edtCep"
+                app:layout_constraintTop_toBottomOf="@id/edtCep">
+
+                <RadioButton
+                    android:id="@+id/radio_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:onClick="@{(view) -> activity.onRadioButtonClick(view)}"
+                    android:text="admin" />
+
+                <RadioButton
+                    android:id="@+id/radio_comum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view) -> activity.onRadioButtonClick(view)}"
+                    android:text="comum" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:backgroundTint="#E4941B"
+                android:text="Cadastrar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
