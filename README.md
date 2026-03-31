@@ -4,6 +4,10 @@ Aplicativo Android nativo desenvolvido como projeto final do modulo Desenvolvime
 
 O app cobre o fluxo de delivery de comida com autenticacao, catalogo de produtos, carrinho e finalizacao de pedido, alem de funcionalidades extras como favoritos, historico de pedidos, gerenciamento de usuarios e controle de endereco local.
 
+## Screenshots
+
+![App Screenshot](hhttps://github.com/tadeujeronimo/atvf-dmai-it/blob/main/screenshot.gif)
+
 ## Requisitos da Atividade Final
 
 - Entregar um aplicativo completo de delivery de comida desde o login ate adicionar ao carrinho.
