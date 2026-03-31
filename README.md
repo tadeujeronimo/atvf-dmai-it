@@ -6,7 +6,7 @@ O app cobre o fluxo de delivery de comida com autenticacao, catalogo de produtos
 
 ## Screenshots
 
-![App Screenshot](hhttps://github.com/tadeujeronimo/atvf-dmai-it/blob/main/screenshot.gif)
+![App Screenshot](https://github.com/tadeujeronimo/atvf-dmai-it/blob/main/screenshot.gif)
 
 ## Requisitos da Atividade Final
 
